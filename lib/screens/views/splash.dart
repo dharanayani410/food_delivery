@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -9,46 +11,45 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacementNamed('/logIn');
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.green.shade900,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/salad.png.png'),
-            const SizedBox(
-              height: 30,
+            Image.asset('assets/images/food.png'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(
+                  "Food ",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color(0xffE7991D),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  " Delivery",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color(0xff592D00),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ],
             ),
-            const Text(
-              "Fast delivery at\nyour doorstep",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              "Home delivery and online reservation\nsystem for restaurants & cafe",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.white70, fontSize: 10),
-            ),
-            const SizedBox(
-              height: 150,
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white70,
-                  foregroundColor: Colors.green.shade900,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  padding: const EdgeInsets.symmetric(horizontal: 100)),
-              child: const Text("Let's Explore"),
-            )
           ],
         ),
       ),
