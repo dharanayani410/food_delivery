@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/screens/views/food.dart';
 import 'package:food_delivery/screens/views/homepage.dart';
 import 'package:food_delivery/screens/views/login.dart';
 import 'package:food_delivery/screens/views/sign_up.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/home_page', page: () => const HomePage()),
         GetPage(name: '/logIn', page: () => const LogIn()),
         GetPage(name: '/signUp', page: () => const SignUp()),
+        GetPage(name: '/food', page: () => const Food()),
       ],
     );
   }

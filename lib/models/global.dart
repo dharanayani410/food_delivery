@@ -7,7 +7,7 @@ class Global {
       'name': 'Idli',
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnJD3tDTPxm2vvZUhoV5YXlRA4J9eRYCBPpg&usqp=CAU',
-      'time': '22 minutes',
+      'time': '22 Mins',
       'price': 40,
       'list': south,
       'rating': 4.2
@@ -18,7 +18,7 @@ class Global {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9uJ4RaF-e_pcNPKdMlNUt5S9aL_5NnkdtHQ&usqp=CAU',
       'price': 120,
-      'time': '25 minutes',
+      'time': '25 Mins',
       'rating': 4.0,
       'list': chinese,
     },
@@ -28,7 +28,7 @@ class Global {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTP3Xg98whHDBt-2EdLaoo9SLqCTJwlUmU3w&usqp=CAU',
       'price': 450,
-      'time': '30 minutes',
+      'time': '30 Mins',
       'rating': 4.5,
       'list': pizza,
     },
@@ -38,7 +38,7 @@ class Global {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzhP56yKfe_J051OaB3fszvDiPntJ01XtHkQ&usqp=CAU',
       'price': 100,
-      'time': '25 minutes',
+      'time': '25 Mins',
       'rating': 4.5,
       'list': burger,
     },
@@ -48,7 +48,7 @@ class Global {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrUjrYvPeg-i5-nLO6RAA_De9bAOGmAGPzAQ&usqp=CAU',
       'price': 120,
-      'time': '22 minutes',
+      'time': '22 Mins',
       'rating': 4.0,
       'list': sizzler,
     },
@@ -58,7 +58,7 @@ class Global {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxQvV8f2HnXqG1j5N602dCW08gohmUpeYNw&usqp=CAU',
       'price': 120,
-      'time': '22 minutes',
+      'time': '22 Mins',
       'rating': 4.0,
       'list': punjabi,
     },
@@ -68,7 +68,7 @@ class Global {
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOGG8mcJglPY-nqfp7NRChIDxdHptZ6ZzQw&usqp=CAU',
       'price': 120,
-      'time': '22 minutes',
+      'time': '22 Mins',
       'rating': 4.0,
       'list': mexican,
     },
@@ -203,7 +203,7 @@ class Global {
       'rating': 4.1
     },
   ];
-  static List chinese = newChinese
+  static List<FoodModal> chinese = newChinese
       .map((e) => FoodModal(
           name: e['name'],
           details: e['details'],
@@ -212,7 +212,7 @@ class Global {
           time: e['time'],
           rating: e['rating']))
       .toList();
-  static List newBurger = [
+  static List<Map<String, dynamic>> newBurger = [
     {
       'name': 'Aloo Tikki Burger',
       'details':
@@ -263,7 +263,7 @@ class Global {
       'rating': 4.1
     },
   ];
-  static List burger = newBurger
+  static List<FoodModal> burger = newBurger
       .map((e) => FoodModal(
           name: e['name'],
           details: e['details'],
@@ -272,7 +272,7 @@ class Global {
           time: e['time'],
           rating: e['rating']))
       .toList();
-  static List newPizza = [
+  static List<Map<String, dynamic>> newPizza = [
     {
       'name': '7 cheese Pizza',
       'details':
@@ -342,7 +342,7 @@ class Global {
       'rating': 4.4
     },
   ];
-  static List pizza = newPizza
+  static List<FoodModal> pizza = newPizza
       .map((e) => FoodModal(
           name: e['name'],
           details: e['details'],
@@ -351,7 +351,7 @@ class Global {
           time: e['time'],
           rating: e['rating']))
       .toList();
-  static List newPunjabi = [
+  static List<Map<String, dynamic>> newPunjabi = [
     {
       'name': 'Paneer Butter Masala',
       'details':
@@ -422,7 +422,7 @@ class Global {
       'rating': 4.0
     },
   ];
-  static List punjabi = newPunjabi
+  static List<FoodModal> punjabi = newPunjabi
       .map((e) => FoodModal(
           name: e['name'],
           details: e['details'],
@@ -431,7 +431,7 @@ class Global {
           time: e['time'],
           rating: e['rating']))
       .toList();
-  static List newMexican = [
+  static List<Map<String, dynamic>> newMexican = [
     {
       'name': 'Mexican',
       'details':
@@ -493,7 +493,7 @@ class Global {
       'rating': 4.0
     },
   ];
-  static List mexican = newMexican
+  static List<FoodModal> mexican = newMexican
       .map((e) => FoodModal(
           name: e['name'],
           details: e['details'],
@@ -502,7 +502,7 @@ class Global {
           time: e['time'],
           rating: e['rating']))
       .toList();
-  static List newSizzler = [
+  static List<Map<String, dynamic>> newSizzler = [
     {
       'name': ' Crazy Italian Sizzler',
       'details': 'Carrots, broccoli and baby corn with luscious cheese',
@@ -563,7 +563,64 @@ class Global {
       'rating': 4.0
     },
   ];
-  static List sizzler = newSizzler
+  static List<FoodModal> sizzler = newSizzler
+      .map((e) => FoodModal(
+          name: e['name'],
+          details: e['details'],
+          image: e['image'],
+          price: e['price'],
+          time: e['time'],
+          rating: e['rating']))
+      .toList();
+
+  static List<Map<String, dynamic>> newChapati = [
+    {
+      'name': 'Puri',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLSz3WcrrGV6M18Vr1jm3lOU14TkuFCqGUIA&usqp=CAU',
+      'details': '',
+      'price': 30,
+      'time': '10 minutes',
+      'rating': 4.2,
+    },
+    {
+      'name': 'Nan',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6kkoal7q1JLeTOlrrYR7S_6hq2UxCtdfxgw&usqp=CAU',
+      'details': '',
+      'price': 40,
+      'time': '15 minutes',
+      'rating': 4.0,
+    },
+    {
+      'name': 'Rumali Roti',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YNfCBXZigDVrW39Ti6tpS4dlnmJxN_1kiA&usqp=CAU',
+      'details': '',
+      'price': 20,
+      'time': '10 minutes',
+      'rating': 4.5,
+    },
+    {
+      'name': 'Chapati',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsbYEWT-1f92SDb7wxs2mjpDwwGSUCw8IT3Q&usqp=CAU',
+      'details': '',
+      'price': 20,
+      'time': '10 minutes',
+      'rating': 4.3,
+    },
+    {
+      'name': 'Paratha',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnkxP05oZzP5SmT8RlhQ69PbVDwoqqG1Hw5g&usqp=CAU',
+      'details': '',
+      'price': 30,
+      'time': '15 minutes',
+      'rating': 4.5,
+    },
+  ];
+  static List<FoodModal> chapati = newChapati
       .map((e) => FoodModal(
           name: e['name'],
           details: e['details'],
