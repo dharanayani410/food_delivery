@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/screens/views/cart_page.dart';
+import 'package:food_delivery/screens/views/favourite_page.dart';
 import 'package:food_delivery/screens/views/food.dart';
 import 'package:food_delivery/screens/views/homepage.dart';
 import 'package:food_delivery/screens/views/login.dart';
+import 'package:food_delivery/screens/views/main_page.dart';
 import 'package:food_delivery/screens/views/sign_up.dart';
 import 'package:food_delivery/screens/views/splash.dart';
 import 'package:get/get.dart';
@@ -31,10 +34,13 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50)))),
       getPages: [
         GetPage(name: '/splash', page: () => const Splash()),
-        GetPage(name: '/home_page', page: () => const HomePage()),
+        GetPage(name: '/', page: () => const HomePage()),
         GetPage(name: '/logIn', page: () => const LogIn()),
         GetPage(name: '/signUp', page: () => const SignUp()),
         GetPage(name: '/food', page: () => const Food()),
+        GetPage(name: '/cart', page: () => const Cart()),
+        GetPage(name: '/fav', page: () => const Fav()),
+        GetPage(name: '/main', page: () => const Main()),
       ],
     );
   }

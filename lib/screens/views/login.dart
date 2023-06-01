@@ -65,40 +65,40 @@ class LogIn extends StatelessWidget {
                   cursorColor: Colors.grey,
                   obscureText: true,
                   decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.lock_outlined),
+                      prefixIcon: const Icon(Icons.lock_outlined),
                       hintText: "Password",
                       suffixIcon: IconButton(
                           onPressed: () {
                             tap = true;
                           },
-                          icon: Icon(Icons.remove_red_eye_outlined))),
+                          icon: const Icon(Icons.remove_red_eye_outlined))),
                 ),
                 const SizedBox(
                   height: 50,
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Get.offAndToNamed('/home_page');
+                    Get.offAndToNamed('/main');
                   },
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 140, vertical: 15)),
+                          horizontal: 120, vertical: 15)),
                   child: const Text("Sign In"),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Create an Account?"),
+                    const Text("Create an Account?"),
                     GestureDetector(
                       onTap: () {
                         Get.offAndToNamed('/signUp');
                       },
-                      child: Text(
+                      child: const Text(
                         "Sign Up",
                         style: TextStyle(color: Color(0xffE7991D)),
                       ),

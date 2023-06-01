@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/models/global.dart';
 import 'package:get/get.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -79,137 +84,113 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Stack(alignment: Alignment.bottomCenter, children: [
-                  SizedBox(
-                    height: 500,
-                    width: double.infinity,
-                    child: GridView.builder(
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: Global.category.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2),
-                        itemBuilder: (context, i) {
-                          return Card(
-                            elevation: 10,
-                            child: Container(
-                              padding: const EdgeInsets.all(5),
-                              margin: const EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        CircleAvatar(
-                                          radius: 40,
-                                          foregroundImage: NetworkImage(
-                                            Global.category[i]['image'],
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: 12,
-                                        ),
-                                        IconButton(
-                                            onPressed: () {},
-                                            icon: const Icon(
-                                              CupertinoIcons.heart_fill,
-                                              size: 20,
-                                            ))
-                                      ]),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      SizedBox(
-                                        width: 100,
-                                        height: 30,
-                                        child: Text(Global.category[i]['name']),
-                                      ),
-                                      Container(
-                                          alignment: Alignment.centerRight,
-                                          width: 35,
-                                          height: 30,
-                                          child: Text(
-                                              "₹ ${Global.category[i]['price']}"))
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      SizedBox(
-                                        width: 110,
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              Global.category[i]['time'],
-                                              style:
-                                                  const TextStyle(fontSize: 10),
-                                            ),
-                                            Text(
-                                              "⭐(${Global.category[i]['rating']})",
-                                              style:
-                                                  const TextStyle(fontSize: 10),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      GestureDetector(
-                                        onTap: () {},
-                                        child: Container(
-                                          alignment: Alignment.center,
-                                          height: 30,
-                                          width: 30,
-                                          decoration: const BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color(0xffE7991D),
-                                          ),
-                                          child: const Icon(
-                                            Icons.add,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ),
+                SizedBox(
+                  height: 500,
+                  width: double.infinity,
+                  child: GridView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: Global.category.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2),
+                      itemBuilder: (context, i) {
+                        return Card(
+                          elevation: 10,
+                          child: Container(
+                            padding: const EdgeInsets.all(5),
+                            margin: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
                             ),
-                          );
-                        }),
-                  ),
-                  Container(
-                    height: 50,
-                    color: Colors.white,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.home_filled)),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.shopping_cart)),
-                        IconButton(
-                            onPressed: () {},
-                            icon: const Icon(CupertinoIcons.heart_fill)),
-                        IconButton(
-                            onPressed: () {}, icon: const Icon(Icons.person)),
-                      ],
-                    ),
-                  ),
-                ])
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 40,
+                                        foregroundImage: NetworkImage(
+                                          Global.category[i]['image'],
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 12,
+                                      ),
+                                      IconButton(
+                                          onPressed: () {},
+                                          icon: const Icon(
+                                            CupertinoIcons.heart_fill,
+                                            size: 20,
+                                          ))
+                                    ]),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SizedBox(
+                                      width: 100,
+                                      height: 30,
+                                      child: Text(Global.category[i]['name']),
+                                    ),
+                                    Container(
+                                        alignment: Alignment.centerRight,
+                                        width: 35,
+                                        height: 30,
+                                        child: Text(
+                                            "₹ ${Global.category[i]['price']}"))
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                      width: 110,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            Global.category[i]['time'],
+                                            style:
+                                                const TextStyle(fontSize: 10),
+                                          ),
+                                          Text(
+                                            "⭐(${Global.category[i]['rating']})",
+                                            style:
+                                                const TextStyle(fontSize: 10),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {},
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        height: 30,
+                                        width: 30,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xffE7991D),
+                                        ),
+                                        child: const Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      }),
+                )
               ],
             ),
           )),
