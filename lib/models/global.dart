@@ -137,12 +137,13 @@ class Global {
   ];
   static List<FoodModal> south = newSouth
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
   static List<Map<String, dynamic>> newChinese = [
     {
@@ -211,12 +212,13 @@ class Global {
   ];
   static List<FoodModal> chinese = newChinese
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
   static List<Map<String, dynamic>> newBurger = [
     {
@@ -271,12 +273,13 @@ class Global {
   ];
   static List<FoodModal> burger = newBurger
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
   static List<Map<String, dynamic>> newPizza = [
     {
@@ -350,12 +353,13 @@ class Global {
   ];
   static List<FoodModal> pizza = newPizza
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
   static List<Map<String, dynamic>> newPunjabi = [
     {
@@ -430,12 +434,13 @@ class Global {
   ];
   static List<FoodModal> punjabi = newPunjabi
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
   static List<Map<String, dynamic>> newMexican = [
     {
@@ -501,12 +506,13 @@ class Global {
   ];
   static List<FoodModal> mexican = newMexican
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
   static List<Map<String, dynamic>> newSizzler = [
     {
@@ -571,12 +577,13 @@ class Global {
   ];
   static List<FoodModal> sizzler = newSizzler
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
 
   static List<Map<String, dynamic>> newChapati = [
@@ -628,12 +635,13 @@ class Global {
   ];
   static List<FoodModal> chapati = newChapati
       .map((e) => FoodModal(
-          name: e['name'],
-          details: e['details'],
-          image: e['image'],
-          price: e['price'],
-          time: e['time'],
-          rating: e['rating']))
+            name: e['name'],
+            details: e['details'],
+            image: e['image'],
+            price: e['price'],
+            time: e['time'],
+            rating: e['rating'],
+          ))
       .toList();
 
   static List buttons = [
@@ -666,6 +674,6 @@ class Global {
   static List<Widget> pages = [
     const HomePage(),
     const Cart(),
-    const Fav(),
+    Fav(),
   ];
 }
