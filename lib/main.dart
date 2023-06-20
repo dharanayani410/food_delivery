@@ -34,10 +34,10 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50)))),
       getPages: [
         GetPage(name: '/splash', page: () => const Splash()),
-        GetPage(name: '/', page: () => const HomePage()),
+        GetPage(name: '/', page: () => HomePage()),
         GetPage(name: '/logIn', page: () => const LogIn()),
         GetPage(name: '/signUp', page: () => const SignUp()),
-        GetPage(name: '/food', page: () => const Food()),
+        GetPage(name: '/food', page: () => Food()),
         GetPage(name: '/cart', page: () => const Cart()),
         GetPage(name: '/fav', page: () => const Fav()),
         GetPage(name: '/main', page: () => const Main()),

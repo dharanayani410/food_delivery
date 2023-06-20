@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/models/global.dart';
 import 'package:get/get.dart';
 
+import '../../controllers/favourite_controller.dart';
+
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+
+  FavController fav = Get.put(FavController());
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -92,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                       itemCount: Global.category.length,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2),
+                              crossAxisCount: 2, childAspectRatio: 3 / 3.1),
                       itemBuilder: (context, i) {
                         return Card(
                           elevation: 10,

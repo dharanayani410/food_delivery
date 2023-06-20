@@ -61,9 +61,34 @@ class Fav extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       height: 150,
                       width: double.infinity,
-                      color: Colors.blue,
-                      child: Text(
-                        controller.fav[i].name,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: const [
+                            BoxShadow(
+                                offset: Offset(2, 5),
+                                spreadRadius: 2,
+                                blurRadius: 10,
+                                color: Colors.grey)
+                          ],
+                          color: Colors.white),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 50,
+                            backgroundColor: Colors.white,
+                            foregroundImage:
+                                NetworkImage(controller.fav[i].image),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(controller.fav[i].name),
+                              Text("₹ ${controller.fav[i].price}"),
+                            ],
+                          ),
+                          IconButton(
+                              onPressed: () {}, icon: const Icon(Icons.delete))
+                        ],
                       ),
                     );
                   },

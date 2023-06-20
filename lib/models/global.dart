@@ -672,8 +672,8 @@ class Global {
   ];
 
   static List<Widget> pages = [
-    const HomePage(),
+    HomePage(),
     const Cart(),
-    Fav(),
+    const Fav(),
   ];
 }

@@ -6,13 +6,13 @@ import 'package:food_delivery/models/food_modal.dart';
 import 'package:get/get.dart';
 
 class Food extends StatelessWidget {
-  const Food({Key? key}) : super(key: key);
+  Food({Key? key}) : super(key: key);
+  FavController fav = Get.find<FavController>();
 
   @override
   Widget build(BuildContext context) {
     List<FoodModal> data =
         ModalRoute.of(context)!.settings.arguments as List<FoodModal>;
-    FavController fav = Get.put(FavController());
     return SafeArea(
         child: Scaffold(
             appBar: AppBar(
@@ -116,7 +116,7 @@ class Food extends StatelessWidget {
                                                 },
                                                 icon: Icon(
                                                   CupertinoIcons.heart_fill,
-                                                  color: e.tap == true
+                                                  color: (e.tap == true)
                                                       ? Colors.red
                                                       : Colors.black,
                                                 )),
